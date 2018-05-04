@@ -8,6 +8,8 @@
 
 namespace Assghard\AesFileEncription;
 
+use Assghard\AesFileEncription\Aes256\AES256Implementation;
+
 class AESCryptFileLib {
 
     const ENCRYPTED_FILE_EXTENSION = "aes";

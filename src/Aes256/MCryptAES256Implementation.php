@@ -33,11 +33,11 @@ class MCryptAES256Implementation implements AES256Implementation {
     }
 
     public function encryptData($the_data, $iv, $enc_key) {
-        return mcrypt_encrypt(self::MY_MCRYPT_CIPHER, $enc_key, $the_data, self::MY_MCRYPT_MODE, $iv);
+        return @mcrypt_encrypt(self::MY_MCRYPT_CIPHER, $enc_key, $the_data, self::MY_MCRYPT_MODE, $iv);
     }
 
     public function decryptData($the_data, $iv, $enc_key) {
-        return mcrypt_decrypt(self::MY_MCRYPT_CIPHER, $enc_key, $the_data, self::MY_MCRYPT_MODE, $iv);
+        return @mcrypt_decrypt(self::MY_MCRYPT_CIPHER, $enc_key, $the_data, self::MY_MCRYPT_MODE, $iv);
     }
 
 }
