@@ -17,24 +17,5 @@
         "psr-4": {
             "Assghard\\AesFileEncription\\": "src/"
         }
-    },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "assghard/aes-file-encription",
-                "version": "dev",
-                "source": {
-                    "url": "https://github.com/assghard/aes-file-encription.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-4": {
-                        "Assghard\\AesFileEncription\\": "src/"
-                    }
-                }
-            }
-        }
-    ]
+    }
 }
