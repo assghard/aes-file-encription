@@ -3,7 +3,7 @@
 
 
 
-> Install: composer require assghard/aes-file-encription --prefer-dist
+> Installation: Run composer require assghard/aes-file-encription --prefer-dist in console
 
 
 ## Security elements
@@ -14,6 +14,12 @@
 > comment
 
 ## How to use
+### Encrypt file:
+1. Add library to use: use Assghard\AesFileEncription\FileEncriptionLibrary;
+2. $encrypted_file = FileEncriptionLibrary::encryptFile($file_to_encrypt, $_PASSWORD);
+ - $file_to_encrypt - relative path to file with filename
+ - $encrypted_file - relative path to encrypted file with filename
+ - $_PASSWORD (optional) - password/key to encryption security
 
 
 ## Deprecated functions
