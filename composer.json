@@ -9,5 +9,6 @@
             "email": "ivan.dublianski@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
