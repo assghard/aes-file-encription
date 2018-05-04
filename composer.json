@@ -1,28 +1,13 @@
 {
     "name": "assghard/aes-file-encription",
-    "description": "AES file encription package",
-    "keywords": [
-        "template",
-        "composer",
-        "package"
-    ],
+    "description": "PHP AES file encription package",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ivan Dublianski",
+            "name": "assghard",
             "email": "ivan.dublianski@gmail.com"
         }
     ],
-    "type": "project",
-    "require": {
-        "php": ">=5.4"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "5.2.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Assghard\\AesFileEncription\\": "src/"
-        }
-    }
+    "require": {}
 }
