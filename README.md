@@ -2,6 +2,10 @@
 > Based on PHP AES File Encryption: https://github.com/philios33/PHP-AES-File-Encryption
 
 
+
+> Install: composer require "assghard/aes-file-encription:dev-master"
+
+
 ## Security elements
 
 
