@@ -5,7 +5,7 @@ namespace Assghard\AesFileEncription;
 use Assghard\AesFileEncription\AESCryptFileLib;
 use Assghard\AesFileEncription\Aes256\MCryptAES256Implementation;
 
-class FileEncriptionLibrary {
+class FileEncryptionLibrary {
     
     public static $extention = '.aes';
 
