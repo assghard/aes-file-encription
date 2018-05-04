@@ -1,5 +1,5 @@
-# PHP AES file encription package
-> Based on PHP7+ AES File Encryption: https://github.com/philios33/PHP-AES-File-Encryption
+# PHP7+ AES file encription package
+> Based on AES File Encryption: https://github.com/philios33/PHP-AES-File-Encryption
 > work in progress !!!
 
 
