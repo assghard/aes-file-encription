@@ -54,6 +54,7 @@ class AESCryptFileLib {
         $meta_data = stream_get_meta_data($dest_fh);
         fclose($dest_fh);
         $filename = realpath($meta_data["uri"]);
+        
         return $filename;
     }
 
@@ -601,55 +602,55 @@ class AESCryptFileLib {
 
 }
 
-class AESCryptMissingDependencyException extends Exception {
+class AESCryptMissingDependencyException extends \Exception {
     
 }
 
 //E.g. missing mcrypt
 
-class AESCryptCorruptedFileException extends Exception {
+class AESCryptCorruptedFileException extends \Exception {
     
 }
 
 //E.g. when file looks corrupted or wont parse
 
-class AESCryptFileMissingException extends Exception {
+class AESCryptFileMissingException extends \Exception {
     
 }
 
 //E.g. cant read file to encrypt
 
-class AESCryptFileAccessException extends Exception {
+class AESCryptFileAccessException extends \Exception {
     
 }
 
 //E.g. read/write error on files
 
-class AESCryptFileExistsException extends Exception {
+class AESCryptFileExistsException extends \Exception {
     
 }
 
 //E.g. when a destination file exists (we never overwrite)
 
-class AESCryptInvalidExtensionException extends Exception {
+class AESCryptInvalidExtensionException extends \Exception {
     
 }
 
 //E.g. when an extension array is invalid
 
-class AESCryptInvalidPassphraseException extends Exception {
+class AESCryptInvalidPassphraseException extends \Exception {
     
 }
 
 //E.g. when the password is wrong
 
-class AESCryptCannotInferDestinationException extends Exception {
+class AESCryptCannotInferDestinationException extends \Exception {
     
 }
 
 //E.g. when we try to decrypt a 3rd party written file which doesnt have the standard file name convention
 
-class AESCryptImplementationException extends Exception {
+class AESCryptImplementationException extends \Exception {
     
 }
 
