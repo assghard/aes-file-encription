@@ -1,6 +1,5 @@
-# PHP7+ AES file encription vendor package
+# PHP7+ AES file encription vendor package (work in progress !!!)
 > Based on AES File Encryption: https://github.com/philios33/PHP-AES-File-Encryption
-> work in progress !!!
 
 
 
