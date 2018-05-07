@@ -14,22 +14,23 @@ class MCryptAES256Implementation implements AES256Implementation {
     public function checkDependencies() {
         $function_list = array(
             "mcrypt_create_iv",
+            "random_bytes",
             "mcrypt_encrypt",
             "mcrypt_decrypt",
         );
         foreach ($function_list as $func) {
             if (!function_exists($func)) {
-                throw new Exception("Missing function dependency: " . $func);
+                throw new \Exception("Missing function dependency: " . $func);
             }
         }
     }
 
     public function createIV() {
-        return random_bytes(self::BLOCK_SIZE);
+        return random_bytes(self::BLOCK_SIZE); //mcrypt_create_iv
     }
 
     public function createRandomKey() {
-        return random_bytes(self::KEY_SIZE);
+        return random_bytes(self::KEY_SIZE); //mcrypt_create_iv
     }
 
     public function encryptData($the_data, $iv, $enc_key) {

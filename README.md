@@ -27,6 +27,7 @@ $decryptedFile = FileEncryptionLibrary::decryptFile($encrypted_file, $decrypted_
 
 ###### Deprecated functions
  - mcrypt_encrypt: This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is highly discouraged - WORK IN PROGRESS
+ - if you have PHP 7.1+ install mcrypt extension. Source: https://gist.github.com/arzzen/1209aa4a430bd95db3090a3399e6c35f
 
 
 =========================================================
