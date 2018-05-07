@@ -1,40 +1,40 @@
-# PHP7+ AES file encription vendor package (work in progress !!!)
+# PHP7+ AES 256 file encription vendor package
 
 Vendor PHP package. Working on PHP 7+
 
 > Based on AES File Encryption: https://github.com/philios33/PHP-AES-File-Encryption
 
-
-
-> Installation: Run composer require assghard/aes-file-encription --prefer-dist in console
-
-
-## Security elements
-
-
-##### AES:
-###### 256(); // smth
-> comment
+## Installation
+**composer require assghard/aes-file-encription --prefer-dist**
 
 ## How to use
+**Add library to use: **use Assghard\AesFileEncription\FileEncryptionLibrary;**
+
 ### Encrypt file:
-1. Add library to use: use Assghard\AesFileEncription\FileEncriptionLibrary;
-2. $encrypted_file = FileEncriptionLibrary::encryptFile($file_to_encrypt, $_PASSWORD);
- - $file_to_encrypt - relative path to file with filename
- - $encrypted_file - relative path to encrypted file with filename
+$encrypted_file = FileEncryptionLibrary::encryptFile($file_to_encrypt, $_PASSWORD);
+ - $file_to_encrypt - relative path to file with filename and extension
+ - $encrypted_file - relative path to encrypted file with filename and extension
  - $_PASSWORD (optional) - password/key to encryption security
 
+### Decrypt file:
+$decrypted_file = pathinfo($filename)['dirname'].'/'.pathinfo($filename)['filename'];
+$decryptedFile = FileEncryptionLibrary::decryptFile($encrypted_file, $decrypted_file, $_PASSWORD);
 
-## Deprecated functions
- - mcrypt_encrypt: This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is highly discouraged.
+ - $encrypted_file - relative path to encrypted file with filename and extension
+ - $decrypted_file - relative path to file which will be decrypted with filename and extension
+ - $_PASSWORD (optional) - password/key used for encryption
+ - $decryptedFile - relative path to decrypted file with original extension
+
+###### Deprecated functions
+ - mcrypt_encrypt: This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is highly discouraged - WORK IN PROGRESS
 
 
-Source: PHP AES File Encryption (https://github.com/philios33/PHP-AES-File-Encryption)
-=============
+####Source: PHP AES File Encryption (https://github.com/philios33/php-aes-file-encryption)
+=========================================================
 
 PHP implementation of the open source aes crypt file format
 
-File specification is described here
+File specification is described here 
 https://www.aescrypt.com/aes_file_format.html
 
 ##Introduction
@@ -47,23 +47,7 @@ The open source file format handles many issues such as null bytes trimming, fil
 
 This library makes it easier for users who are only interested in encrypting and decrypting .aes files with passwords.  Other technicalities such as file structure, versions & encryption keys are transparent to the user.
 
-##Requirements
-1. PHP 5
-2. An AES 256 bit Encryption Implementation (you can use the included mcrypt implementation or some other)
-If you don't have mcrypt available, you only need to implement the AES256Implementation interface using whatever library you want.
-
-##Usage (see example_usage.php)
-1. Include the AESCryptFileLib.php class
-2. Construct an instance of the library using an AES256 implementation
-3. Call the public functions
-
 ##Compatibility
 This library writes version 2 of the file specification defined at https://www.aescrypt.com/aes_file_format.html
 Backwards compatibility with the older two versions (reading old .aes files) is untested.
 Output .aes files are fully compatible with any software using the AES Crypt standard file format.
-
-##To do
-1. Test reading files stored in version 0 and 1 formats.
-
-##License
-I believe that open source software should be free for everyone and non restrictive. My code is based on a completely free to use open source file format which I did not invent. I will choose MIT since it seems to be the least restrictive license out there.
