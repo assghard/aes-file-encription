@@ -29,8 +29,8 @@ $decryptedFile = FileEncryptionLibrary::decryptFile($encrypted_file, $decrypted_
  - mcrypt_encrypt: This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is highly discouraged - WORK IN PROGRESS
 
 
-#### Source: PHP AES File Encryption (https://github.com/philios33/php-aes-file-encryption)
 =========================================================
+#### Source: PHP AES File Encryption (https://github.com/philios33/php-aes-file-encryption)
 
 #### PHP implementation of the open source aes crypt file format
 File specification is described here 
