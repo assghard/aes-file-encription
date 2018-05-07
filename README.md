@@ -32,8 +32,7 @@ $decryptedFile = FileEncryptionLibrary::decryptFile($encrypted_file, $decrypted_
 #### Source: PHP AES File Encryption (https://github.com/philios33/php-aes-file-encryption)
 =========================================================
 
-PHP implementation of the open source aes crypt file format
-
+#### PHP implementation of the open source aes crypt file format
 File specification is described here 
 https://www.aescrypt.com/aes_file_format.html
 
